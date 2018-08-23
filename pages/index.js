@@ -5,9 +5,9 @@ import Layout from "../components/Layout/Layout";
 const IndexPage = () => (
   <Layout>
     <Head>
-      <title>Soya Next Project</title>
+      <title>Bitcoin</title>
     </Head>
-    <p>This is your project homepage</p>
+    <p>mroemzh</p>
   </Layout>
 );
 
