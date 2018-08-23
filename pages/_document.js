@@ -31,10 +31,6 @@ export default class extends Document {
     return (
       <html lang="en">
         <Head>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i"
-          />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
