@@ -21,6 +21,8 @@
     "express": "^4.16.3",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
+    "history": "^4.7.2",
+    "isomorphic-unfetch": "^2.1.1",
     "next": "^5.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
@@ -30,6 +32,7 @@
     "react-emotion": "^9.2.6",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "soya-form": "0.0.15",
     "soya-next": "^0.5.0",
     "soya-next-server": "^0.5.0"
   },

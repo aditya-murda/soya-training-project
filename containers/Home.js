@@ -1,0 +1,46 @@
+import React, {Component} from "react";
+import {Breadcrumb, Select, Label} from "@traveloka/soya-components";
+import Link from "next/link";
+
+class Home extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    const links = [
+      {
+        title: "Home",
+        href: "/"
+      }, 
+      {
+        title: "Settings"
+      }
+    ];
+  
+    const options = [
+      {
+        label: "Tera",
+        value: "tera"
+      }, 
+      {
+        label: "Zetta",
+        value: "zetta"
+      }
+    ];
+
+    return (
+      <div>
+        <br/>
+        <span>
+          <Link href="/currencies"><a>Currencies</a></Link>
+          <br/>
+          <Link href="/settings"><a>Settings</a></Link>
+        </span>
+      </div>
+    )
+  }
+}
+
+export default Home;
