@@ -1,6 +1,8 @@
 import React, {Component} from "react";
+import { connect } from 'react-redux';
 import {Breadcrumb, Select, Label} from "@traveloka/soya-components";
 import Link from "next/link";
+import {} from "../actions/common/ServiceAction"
 
 class Home extends React.Component {
 
@@ -9,6 +11,9 @@ class Home extends React.Component {
   }
 
   render() {
+
+    console.log(this.props);
+
     const links = [
       {
         title: "Home",
@@ -43,4 +48,14 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  userContext: {
+    accessToken: state.oidc && state.oidc.token ? state.oidc.token.accessToken : null,
+    userEmail: state.oidc && state.oidc.token ? state.oidc.token.userEmail: null,
+    tokenBody: state.oidc && state.oidc.token ? state.oidc.token.tokenBody : null,
+    permission: state.oidc.token.tokenBody['https://traveloka/permission'],
+    aud: state.oidc.token.tokenBody['aud']
+  }
+});
+
+export default connect(mapStateToProps)(Home);
